@@ -17,7 +17,6 @@ function Model(props) {
 
   useEffect(() => {
     Object.entries(materials).map((material) => {
-      // these are the material names that can't be changed color
       if (
         material[0] !== "zFdeDaGNRwzccye" &&
         material[0] !== "ujsvqBWRMnqdwPx" &&
@@ -251,7 +250,7 @@ function Model(props) {
         geometry={nodes.rqgRAGHOwnuBypi.geometry}
         material={materials.HGhEhpqSBZRnjHC}
         scale={0.01}
-      />
+      /> 
     </group>
   );
 }

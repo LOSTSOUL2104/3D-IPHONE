@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import Model from "./components/Model";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <main className="bg-black">
@@ -9,6 +10,7 @@ const App = () => {
       <Hero />
       <Highlights />
       <Model />
+      <Footer/>
     </main>
   );
 };
