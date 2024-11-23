@@ -36,27 +36,34 @@ const Model = () => {
     if (size === "large") {
       animateWithGsapTimeline(tl, small, smallRotation, "#view1", "#view2", {
         transform: "translateX(-100%)",
-        duration: 2,
+        duration: 1.5,
+        ease: "power2.inOut",
       });
     }
 
     if (size === "small") {
       animateWithGsapTimeline(tl, large, largeRotation, "#view2", "#view1", {
         transform: "translateX(0)",
-        duration: 2,
+        duration: 1.5,
+        ease: "power2.inOut",
       });
     }
   }, [size]);
 
   useGSAP(() => {
-    gsap.to("#heading", { y: 0, opacity: 1 });
+    gsap.to("#heading", {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power2.out",
+    });
   }, []);
 
   return (
     <section className="common-padding">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
-          Take a closer look.
+          Get a better view.
         </h1>
 
         <div className="flex flex-col items-center mt-5">
@@ -98,14 +105,14 @@ const Model = () => {
           </div>
 
           <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
+            <p className="text-lg font-light text-center mb-5 ">{model.title}</p>
 
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, i) => (
                   <li
                     key={i}
-                    className="w-6 h-6 rounded-full mx-2 cursor-pointer"
+                    className="w-6 h-6 rounded-3xl mx-2 cursor-pointer"
                     style={{ backgroundColor: item.color[0] }}
                     onClick={() => setModel(item)}
                   />

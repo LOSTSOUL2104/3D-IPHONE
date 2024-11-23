@@ -6,7 +6,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
 
 body {
   color: white;
@@ -87,19 +93,19 @@ canvas {
   }
 
   .hero-title {
-    @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10;
+    @apply text-center font-semibold text-5xl text-gray-200  opacity-0 max-md:mb-10;
   }
 
   .hiw-title {
-    @apply text-4xl md:text-7xl font-semibold text-center;
+    @apply text-gray-50 text-6xl md:text-6xl font-bold text-center;
   }
 
   .hiw-subtitle {
-    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center;
+    @apply text-gray-100 font-semibold text-2xl md:text-2xl py-10 text-center;
   }
 
   .hiw-video {
-    @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden;
+    @apply absolute w-[98%] h-[90%] rounded-[57px] overflow-hidden;
   }
 
   .hiw-text-container {
@@ -111,7 +117,7 @@ canvas {
   }
 
   .hiw-bigtext {
-    @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2;
+    @apply text-white text-4xl md:text-6xl font-normal md:font-semibold my-2;
   }
 
   .video-carousel_container {
@@ -122,3 +128,4 @@ canvas {
     @apply opacity-0 translate-y-[100px];
   }
 }
+
